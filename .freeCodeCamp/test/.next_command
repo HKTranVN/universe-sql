@@ -66,3 +66,19 @@ sed -i 's/\r$//' queries.sh
 ./queries.sh
 ./queries.sh
 ./queries.sh
+/q
+\q
+pg_dump -cC --inserts -U freecodecamp worldcup > worldcup.sql
+ls --color=auto
+git init
+git config --global user.name freeCodeCamp
+git config --global user.name HKTRAN
+git add worldcup.sql queries.sh insert_data.sh
+git commit -m "Add worldcup database project files"
+git remote add origin https://github.com/HKTranVN/universe-sql.git
+git branch -M main
+git remote remove origin
+git remote add origin https://github.com/HKTranVN/universe-sql.git
+git branch -M main
+git pull --rebase origin main
+git add .
